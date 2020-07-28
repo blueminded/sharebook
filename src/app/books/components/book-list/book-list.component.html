@@ -1,0 +1,14 @@
+<div class="book-list">
+  <div class="row">
+    <div class="col-12">
+      <div class="card-columns">
+        <app-card
+          *ngFor="let book of books"
+          [imageUrl]="book.imageUrl"
+          [name]="book.name"
+          [author]="book.author"
+        ></app-card>
+      </div>
+    </div>
+  </div>
+</div>
