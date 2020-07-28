@@ -2,6 +2,13 @@
   margin: 3rem;
 
   .card-columns {
-    column-count: 5;
+    column-count: 1;
+    @media (min-width: 576px) {
+      column-count: 3;
+    }
+
+    @media (min-width: 992px) {
+      column-count: 5;
+    }
   }
 }
