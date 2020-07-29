@@ -6,6 +6,7 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { ActionIconComponent } from './shared/components/action-icon/action-icon.component';
 import { CardComponent } from './shared/components/card/card.component';
 import { BookListComponent } from './books/components/book-list/book-list.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { BookListComponent } from './books/components/book-list/book-list.compon
     CardComponent,
     BookListComponent,
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })

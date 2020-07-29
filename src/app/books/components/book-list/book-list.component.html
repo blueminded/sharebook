@@ -3,10 +3,11 @@
     <div class="col-12">
       <div class="card-columns">
         <app-card
-          *ngFor="let book of books"
+          *ngFor="let book of books; let i = index"
           [imageUrl]="book.imageUrl"
           [name]="book.name"
           [author]="book.author"
+          [path]="['books', i]"
         ></app-card>
       </div>
     </div>

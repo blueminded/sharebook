@@ -4,6 +4,7 @@
   top: 5rem;
 
   .icon {
+    text-decoration: none;
     width: 50px;
     height: 50px;
     color: white;
@@ -13,8 +14,5 @@
     align-items: center;
     justify-content: center;
     font-size: 2rem;
-    &:hover {
-      cursor: pointer;
-    }
   }
 }
