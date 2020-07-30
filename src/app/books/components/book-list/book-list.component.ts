@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IBook } from '../../models/ibook.interface';
+import { BooksService } from '../../services/books.service';
 
 @Component({
   selector: 'app-book-list',
@@ -7,135 +8,13 @@ import { IBook } from '../../models/ibook.interface';
   styleUrls: ['./book-list.component.scss'],
 })
 export class BookListComponent implements OnInit {
-  books: IBook[] = [
-    {
-      imageUrl: 'assets/img/cerebro-creativo.jpg',
-      name: 'Cerebreo creativo',
-      author: 'Joyce Holmes',
-    },
-    {
-      imageUrl: 'assets/img/hombres-norte.jpg',
-      name: 'Los hombres del norte',
-      author: 'Jhon Haywood',
-    },
-    {
-      imageUrl: 'assets/img/cerebro-creativo.jpg',
-      name: 'Cerebreo creativo',
-      author: 'Joyce Holmes',
-    },
-    {
-      imageUrl: 'assets/img/hombres-norte.jpg',
-      name: 'Los hombres del norte',
-      author: 'Jhon Haywood',
-    },
-    {
-      imageUrl: 'assets/img/cerebro-creativo.jpg',
-      name: 'Cerebreo creativo',
-      author: 'Joyce Holmes',
-    },
-    {
-      imageUrl: 'assets/img/hombres-norte.jpg',
-      name: 'Los hombres del norte',
-      author: 'Jhon Haywood',
-    },
-    {
-      imageUrl: 'assets/img/cerebro-creativo.jpg',
-      name: 'Cerebreo creativo',
-      author: 'Joyce Holmes',
-    },
-    {
-      imageUrl: 'assets/img/hombres-norte.jpg',
-      name: 'Los hombres del norte',
-      author: 'Jhon Haywood',
-    },
-    {
-      imageUrl: 'assets/img/cerebro-creativo.jpg',
-      name: 'Cerebreo creativo',
-      author: 'Joyce Holmes',
-    },
-    {
-      imageUrl: 'assets/img/hombres-norte.jpg',
-      name: 'Los hombres del norte',
-      author: 'Jhon Haywood',
-    },
-    {
-      imageUrl: 'assets/img/cerebro-creativo.jpg',
-      name: 'Cerebreo creativo',
-      author: 'Joyce Holmes',
-    },
-    {
-      imageUrl: 'assets/img/hombres-norte.jpg',
-      name: 'Los hombres del norte',
-      author: 'Jhon Haywood',
-    },
-    {
-      imageUrl: 'assets/img/cerebro-creativo.jpg',
-      name: 'Cerebreo creativo',
-      author: 'Joyce Holmes',
-    },
-    {
-      imageUrl: 'assets/img/hombres-norte.jpg',
-      name: 'Los hombres del norte',
-      author: 'Jhon Haywood',
-    },
-    {
-      imageUrl: 'assets/img/cerebro-creativo.jpg',
-      name: 'Cerebreo creativo',
-      author: 'Joyce Holmes',
-    },
-    {
-      imageUrl: 'assets/img/hombres-norte.jpg',
-      name: 'Los hombres del norte',
-      author: 'Jhon Haywood',
-    },
-    {
-      imageUrl: 'assets/img/cerebro-creativo.jpg',
-      name: 'Cerebreo creativo',
-      author: 'Joyce Holmes',
-    },
-    {
-      imageUrl: 'assets/img/hombres-norte.jpg',
-      name: 'Los hombres del norte',
-      author: 'Jhon Haywood',
-    },
-    {
-      imageUrl: 'assets/img/cerebro-creativo.jpg',
-      name: 'Cerebreo creativo',
-      author: 'Joyce Holmes',
-    },
-    {
-      imageUrl: 'assets/img/hombres-norte.jpg',
-      name: 'Los hombres del norte',
-      author: 'Jhon Haywood',
-    },
-    {
-      imageUrl: 'assets/img/cerebro-creativo.jpg',
-      name: 'Cerebreo creativo',
-      author: 'Joyce Holmes',
-    },
-    {
-      imageUrl: 'assets/img/cerebro-creativo.jpg',
-      name: 'Cerebreo creativo',
-      author: 'Joyce Holmes',
-    },
-    {
-      imageUrl: 'assets/img/hombres-norte.jpg',
-      name: 'Los hombres del norte',
-      author: 'Jhon Haywood',
-    },
-    {
-      imageUrl: 'assets/img/hombres-norte.jpg',
-      name: 'Los hombres del norte',
-      author: 'Jhon Haywood',
-    },
-    {
-      imageUrl: 'assets/img/hombres-norte.jpg',
-      name: 'Los hombres del norte',
-      author: 'Jhon Haywood',
-    },
-  ];
+  books: IBook[] = [];
+  //imageUrl: 'assets/img/cerebro-creativo.jpg',
+  //imageUrl: 'assets/img/hombres-norte.jpg',
 
-  constructor() {}
+  constructor(private bookService: BooksService) {
+    this.books = this.bookService.getAll();
+  }
 
   ngOnInit(): void {}
 }

@@ -1,1 +1,26 @@
-<p>create-book works!</p>
+<form (submit)="onSubmit()">
+  <div class="form-group">
+    <label for="name">name</label>
+    <input type="text" name="name" class="form-control" [(ngModel)]="name" />
+  </div>
+  <div class="form-group">
+    <label for="author">author</label>
+    <input
+      type="text"
+      class="form-control"
+      name="author"
+      [(ngModel)]="author"
+    />
+  </div>
+  <div class="form-group">
+    <label for="imageUrl">imageUrl</label>
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="imageUrl"
+      name="imageUrl"
+    />
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
